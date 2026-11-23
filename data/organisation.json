@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "source": "Island Operational Chain – Technical officer List 2026",
+    "hierarchy": [
+      "zone",
+      "region",
+      "branch",
+      "technicalOfficer"
+    ],
+    "zones": 4,
+    "units": 1,
+    "regions": 15,
+    "branches": 89,
+    "technicalOfficers": 162
+  },
+  "leadership": {
+    "agmId": "AGM-01",
+    "dcmeId": "DCME-01"
+  },
+  "zones": [
+    {
+      "id": "CEN",
+      "name": "Central",
+      "type": "zone",
+      "seniorEngineerId": "SE-CEN",
+      "regionCount": 3
+    },
+    {
+      "id": "NOR",
+      "name": "North",
+      "type": "zone",
+      "seniorEngineerId": "SE-NOR",
+      "regionCount": 1
+    },
+    {
+      "id": "SOU",
+      "name": "South",
+      "type": "zone",
+      "seniorEngineerId": "SE-SOU",
+      "regionCount": 4
+    },
+    {
+      "id": "WES",
+      "name": "Western",
+      "type": "zone",
+      "seniorEngineerId": "SE-WES",
+      "regionCount": 7
+    },
+    {
+      "id": "SPU",
+      "name": "Spare Parts Unit",
+      "type": "unit",
+      "seniorEngineerId": "SE-SPU",
+      "regionCount": 0
+    }
+  ],
+  "regions": [
+    {
+      "id": "KUR",
+      "name": "Kurunegala",
+      "zoneId": "CEN",
+      "engineerIds": [
+        "RE-01"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "KDY",
+      "name": "Kandy",
+      "zoneId": "CEN",
+      "engineerIds": [
+        "RE-02",
+        "RE-03"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "BAD",
+      "name": "Badulla",
+      "zoneId": "CEN",
+      "engineerIds": [
+        "RE-04"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "ANU",
+      "name": "Anuradhapura",
+      "zoneId": "NOR",
+      "engineerIds": [
+        "RE-05",
+        "RE-06"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "GAL",
+      "name": "Galle",
+      "zoneId": "SOU",
+      "engineerIds": [
+        "RE-07"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "KAL",
+      "name": "Kalutara",
+      "zoneId": "SOU",
+      "engineerIds": [
+        "RE-07"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "MAT",
+      "name": "Matara",
+      "zoneId": "SOU",
+      "engineerIds": [
+        "RE-08"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "RAT",
+      "name": "Ratnapura",
+      "zoneId": "SOU",
+      "engineerIds": [
+        "RE-09"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "CSO",
+      "name": "Colombo South",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-10",
+        "RE-11"
+      ],
+      "countsAs": 2,
+      "subRegions": [
+        {
+          "code": "CS 01",
+          "engineerId": "RE-10"
+        },
+        {
+          "code": "CS 02",
+          "engineerId": "RE-11"
+        }
+      ]
+    },
+    {
+      "id": "CNO",
+      "name": "Colombo North",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-12"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "GAM",
+      "name": "Gampaha",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-13"
+      ],
+      "countsAs": 1,
+      "note": "Includes Kiribathgoda"
+    },
+    {
+      "id": "NEG",
+      "name": "Negombo",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-14"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "NUG",
+      "name": "Nugegoda",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-15"
+      ],
+      "countsAs": 1
+    },
+    {
+      "id": "RML",
+      "name": "Ratmalana",
+      "zoneId": "WES",
+      "engineerIds": [
+        "RE-16"
+      ],
+      "countsAs": 1
+    }
+  ],
+  "branches": [
+    {
+      "id": "BR-001",
+      "name": "Giriulla",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-002",
+      "name": "Kegalle",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-003",
+      "name": "Kuliyapitiya",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-004",
+      "name": "Kurunegala",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-005",
+      "name": "Malsiripura",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-006",
+      "name": "Mawanella",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-007",
+      "name": "Narammala",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-008",
+      "name": "Nikaweratiya",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-009",
+      "name": "Warakapola",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-010",
+      "name": "Wariyapola",
+      "regionId": "KUR",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-011",
+      "name": "Gampola",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-012",
+      "name": "Hatton",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-013",
+      "name": "Kandy",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-014",
+      "name": "Mawathagama",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-015",
+      "name": "Nawalapitiya",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-016",
+      "name": "Pilimathalawa",
+      "regionId": "KDY",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-017",
+      "name": "Ampara",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-018",
+      "name": "Badulla",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-019",
+      "name": "Bandarawela",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-020",
+      "name": "Bibila",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-021",
+      "name": "Kalmunai",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-022",
+      "name": "Mahiyanganaya",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-023",
+      "name": "Monaragala",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-024",
+      "name": "Nuwara Eliya",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-025",
+      "name": "Wellawaya",
+      "regionId": "BAD",
+      "zoneId": "CEN",
+      "active": true
+    },
+    {
+      "id": "BR-026",
+      "name": "Anuradhapura",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-027",
+      "name": "Batticaloa",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-028",
+      "name": "Dambulla",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-029",
+      "name": "Galgamuwa",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-030",
+      "name": "Hingurakgoda",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-031",
+      "name": "Jaffna",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-032",
+      "name": "Kanthale",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-033",
+      "name": "Kekirawa",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-034",
+      "name": "Kilinochchi",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-035",
+      "name": "Mannar",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-036",
+      "name": "Trincomalee",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-037",
+      "name": "Vavuniya",
+      "regionId": "ANU",
+      "zoneId": "NOR",
+      "active": true
+    },
+    {
+      "id": "BR-038",
+      "name": "Aluthgama",
+      "regionId": "GAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-039",
+      "name": "Ambalangoda",
+      "regionId": "GAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-040",
+      "name": "Elpitiya",
+      "regionId": "GAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-041",
+      "name": "Galle",
+      "regionId": "GAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-042",
+      "name": "Udugama",
+      "regionId": "GAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-043",
+      "name": "Kalutara",
+      "regionId": "KAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-044",
+      "name": "Mathugama",
+      "regionId": "KAL",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-045",
+      "name": "Akuressa",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-046",
+      "name": "Ambalantota",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-047",
+      "name": "Beliatta",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-048",
+      "name": "Deniyaya",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-049",
+      "name": "Dickwella",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-050",
+      "name": "Matara",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-051",
+      "name": "Tissamaharama",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-052",
+      "name": "Weligama",
+      "regionId": "MAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-053",
+      "name": "Avissawella",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-054",
+      "name": "Balangoda",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-055",
+      "name": "Eheliyagoda",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-056",
+      "name": "Embilipitiya",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-057",
+      "name": "Kahawatta",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-058",
+      "name": "Ratnapura",
+      "regionId": "RAT",
+      "zoneId": "SOU",
+      "active": true
+    },
+    {
+      "id": "BR-059",
+      "name": "Bambalapitiya",
+      "regionId": "CSO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-060",
+      "name": "Head Office",
+      "regionId": "CSO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-061",
+      "name": "Kotahena",
+      "regionId": "CSO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-062",
+      "name": "Battaramulla",
+      "regionId": "CNO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-063",
+      "name": "Kotikawatta",
+      "regionId": "CNO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-064",
+      "name": "Malabe",
+      "regionId": "CNO",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-065",
+      "name": "Gampaha",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-066",
+      "name": "Kadawatha",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-067",
+      "name": "Kaduwela",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-068",
+      "name": "Kiribathgoda",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-069",
+      "name": "Minuwangoda",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-070",
+      "name": "Nittambuwa",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-071",
+      "name": "Ragama",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-072",
+      "name": "Veyangoda",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-073",
+      "name": "Wattala",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-074",
+      "name": "Yakkala",
+      "regionId": "GAM",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-075",
+      "name": "Chilaw",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-076",
+      "name": "Ja-Ela",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-077",
+      "name": "Kandana",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-078",
+      "name": "Kochchikade",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-079",
+      "name": "Marawila",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-080",
+      "name": "Negombo",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-081",
+      "name": "Puttalam",
+      "regionId": "NEG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-082",
+      "name": "Homagama",
+      "regionId": "NUG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-083",
+      "name": "Horana",
+      "regionId": "NUG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-084",
+      "name": "Maharagama",
+      "regionId": "NUG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-085",
+      "name": "Nugegoda",
+      "regionId": "NUG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-086",
+      "name": "Piliyandala",
+      "regionId": "NUG",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-087",
+      "name": "Moratuwa",
+      "regionId": "RML",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-088",
+      "name": "Panadura",
+      "regionId": "RML",
+      "zoneId": "WES",
+      "active": true
+    },
+    {
+      "id": "BR-089",
+      "name": "Ratmalana",
+      "regionId": "RML",
+      "zoneId": "WES",
+      "active": true
+    }
+  ]
+}

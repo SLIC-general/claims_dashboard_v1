@@ -1,0 +1,81 @@
+/* Sign-in screen, access indicators, user panel and "my standing". Shared by desktop and mobile. */
+
+/* ---------- Sign-in ---------- */
+body.auth-locked .app, body.auth-locked #m-app { visibility: hidden; }
+#login {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 20px 16px;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(242,165,22,.18), transparent 60%),
+    radial-gradient(900px 500px at 110% 110%, rgba(238,74,94,.16), transparent 60%),
+    linear-gradient(160deg, #0a7c86 0%, #066870 55%, #054f56 100%);
+  overflow-y: auto; animation: loginIn .4s cubic-bezier(.2,.8,.2,1);
+}
+#login.out { opacity: 0; transform: scale(1.02); transition: opacity .25s, transform .25s; }
+@keyframes loginIn { from { opacity: 0; } }
+.login-card {
+  width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 6px;
+  padding: 28px 24px 20px; border-radius: 22px; background: #fff; color: #18212f;
+  box-shadow: 0 24px 60px rgba(3, 40, 44, .35);
+  animation: cardIn .5s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes cardIn { from { opacity: 0; transform: translateY(16px); } }
+.login-logo { width: 84px; height: auto; margin: 0 auto 6px; border-radius: 10px; }
+.login-card h1 { margin: 0; text-align: center; font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #075f67; }
+.login-sub { margin: 0 0 12px; text-align: center; font-size: 13.5px; color: #5b6678; }
+.login-card label { margin-top: 8px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #5b6678; }
+.login-card input {
+  width: 100%; height: 46px; padding: 0 14px; border-radius: 12px; border: 1px solid #d6dee3; background: #f6f9fa;
+  font: inherit; font-size: 16px; color: #18212f; outline: none; transition: border-color .15s, box-shadow .15s, background .15s; box-sizing: border-box;
+}
+.login-card input:focus { border-color: #0fa3ad; background: #fff; box-shadow: 0 0 0 3px rgba(15,163,173,.18); }
+.login-pw { position: relative; }
+.login-pw input { padding-right: 70px; }
+.login-eye { position: absolute; right: 6px; top: 6px; height: 34px; padding: 0 10px; border: 0; border-radius: 9px; background: transparent; color: #0a7d86; font-weight: 700; font-size: 13px; cursor: pointer; }
+.login-error { min-height: 20px; margin-top: 6px; font-size: 13px; font-weight: 600; color: #c81e3a; }
+.login-btn {
+  height: 48px; margin-top: 4px; border: 0; border-radius: 12px; cursor: pointer;
+  background: linear-gradient(140deg, #0fa3ad, #0a7d86); color: #fff; font-size: 15.5px; font-weight: 700;
+  box-shadow: 0 8px 18px rgba(10,125,134,.3); transition: transform .15s, opacity .15s;
+}
+.login-btn:active { transform: scale(.98); }
+.login-btn:disabled { opacity: .7; cursor: wait; }
+.login-foot { margin: 14px 0 0; text-align: center; font-size: 11.5px; color: #8a96a6; }
+
+/* ---------- Toast ---------- */
+#appToast {
+  position: fixed; left: 50%; bottom: 96px; z-index: 120; max-width: min(92vw, 420px);
+  padding: 11px 16px; border-radius: 14px; background: #18212f; color: #fff; font-size: 13.5px; line-height: 1.35; text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25); opacity: 0; pointer-events: none;
+  transform: translate(-50%, 12px); transition: opacity .2s, transform .25s cubic-bezier(.2,.8,.2,1);
+}
+#appToast.show { opacity: 1; transform: translate(-50%, 0); }
+@media (min-width: 701px) { #appToast { bottom: 28px; } }
+
+/* ---------- Desktop: user panel in the sidebar ---------- */
+.sideuser { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 12px; background: rgba(15,163,173,.08); }
+.sideuser:empty { display: none; }
+.su-avatar { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(140deg, #f2a516, #ee4a5e); color: #fff; font-weight: 700; font-size: 12.5px; }
+.su-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.su-text b { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.su-text small { font-size: 11px; color: var(--muted, #5b6678); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.su-out { flex: none; width: 30px; height: 30px; border: 0; border-radius: 9px; background: #fff; color: #c81e3a; cursor: pointer; font-size: 15px; }
+.su-out:hover { background: #fde6e9; }
+
+/* ---------- Desktop: my standing strip ---------- */
+.standing { display: flex; align-items: stretch; gap: 8px; margin-bottom: 10px; padding: 10px; border-radius: 12px; background: linear-gradient(120deg, rgba(15,163,173,.1), rgba(242,165,22,.08)); border: 1px solid rgba(15,163,173,.18); }
+.standing[hidden] { display: none; }
+.st-head { flex: 1.4; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.st-head small { font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted, #5b6678); }
+.st-head b { font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-cell { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; padding: 4px 8px; border-radius: 9px; background: #fff; }
+.st-cell b { font-size: 17px; font-weight: 800; line-height: 1.1; }
+.st-cell small { font-size: 10.5px; color: var(--muted, #5b6678); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-cell .positive { color: #13854f; } .st-cell .attention { color: #b26a00; } .st-cell .negative { color: #c81e3a; }
+.st-cell small.up { color: #13854f; } .st-cell small.down { color: #c81e3a; }
+
+/* ---------- Access indicators ---------- */
+.rank.locked, .listrow.locked { cursor: default; }
+.rank.locked:hover, .listrow.locked:hover { transform: none; }
+.rank.mine { box-shadow: inset 3px 0 0 #0fa3ad; background: rgba(15,163,173,.06); }
+.listrow .lock { font-style: normal; font-size: 11px; opacity: .7; }
+.rname small { display: block; font-size: 11px; font-weight: 500; color: var(--muted, #5b6678); }

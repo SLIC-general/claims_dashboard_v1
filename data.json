@@ -1,0 +1,27 @@
+{
+  "organisation": "data/organisation.json",
+  "categories": {
+    "bee": "data/bee.json",
+    "video": "data/video.json",
+    "sa": "data/sa.json",
+    "ratio": "data/ratio.json",
+    "cil": "data/cil.json",
+    "parts": "data/parts.json",
+    "consistency": "data/consistency.json",
+    "errors": "data/errors.json",
+    "offers": "data/offers.json",
+    "documents": "data/documents.json"
+  },
+  "alerts": "data/alerts.json",
+  "thresholds": {
+    "positive": 75,
+    "attention": 65,
+    "minimumRankingVolume": 30
+  },
+  "users": "data/users.json",
+  "roles": "data/roles.json",
+  "auth": {
+    "commonPasswordSha256": "acc5e58fe71e2d068ca94790af54e9736428c8a70fec2dc0d1aeb6e738e13e18",
+    "sessionHours": 12
+  }
+}

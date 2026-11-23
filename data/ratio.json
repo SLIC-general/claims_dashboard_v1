@@ -1,0 +1,42 @@
+{
+  "category": "ratio",
+  "title": "Claim Ratio",
+  "unit": "%",
+  "headlineMetric": "Overall ratio",
+  "headlineValue": 61.8,
+  "source": "Engineering Dashboard 2026 — island claim ratio trend (Jan–May 2026) and Net Premium report (Jan–Mar 2026)",
+  "records": [],
+  "target": 75,
+  "islandMonthly": [
+    {
+      "period": "2026-01",
+      "ratio": 80.1,
+      "premium": 1020000000,
+      "claims": 812000000
+    },
+    {
+      "period": "2026-02",
+      "ratio": 79.3,
+      "premium": 1030000000,
+      "claims": 822000000
+    },
+    {
+      "period": "2026-03",
+      "ratio": 77.8,
+      "premium": 1040000000,
+      "claims": 788000000
+    },
+    {
+      "period": "2026-04",
+      "ratio": 78.2,
+      "premium": null,
+      "claims": null
+    },
+    {
+      "period": "2026-05",
+      "ratio": 78.4,
+      "premium": null,
+      "claims": null
+    }
+  ]
+}

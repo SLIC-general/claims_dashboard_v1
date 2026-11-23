@@ -1,0 +1,117 @@
+{
+  "note": "scope: island | zone | region | branch. branchDetail: all = can open any branch breakdown, own = only branches in scope. otherBranches: summary = see other branches as totals and rankings, hidden = only own scope. screens: which parts of the dashboard the role can open.",
+  "screens": [
+    "home",
+    "zones",
+    "branches",
+    "alerts",
+    "search",
+    "officerContacts"
+  ],
+  "roles": {
+    "ADMIN": {
+      "label": "Administrator",
+      "level": 0,
+      "scope": "island",
+      "branchDetail": "all",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "AGM": {
+      "label": "AGM – Technical",
+      "level": 1,
+      "scope": "island",
+      "branchDetail": "all",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "DCME": {
+      "label": "Deputy Chief Motor Engineer",
+      "level": 2,
+      "scope": "island",
+      "branchDetail": "all",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "VIEWER": {
+      "label": "Island viewer",
+      "level": 2,
+      "scope": "island",
+      "branchDetail": "all",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "SENIOR_ENGINEER": {
+      "label": "Senior Engineer",
+      "level": 3,
+      "scope": "zone",
+      "branchDetail": "own",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "REGIONAL_ENGINEER": {
+      "label": "Regional Engineer",
+      "level": 4,
+      "scope": "region",
+      "branchDetail": "own",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search",
+        "officerContacts"
+      ]
+    },
+    "TO": {
+      "label": "Technical Officer",
+      "level": 6,
+      "scope": "branch",
+      "branchDetail": "own",
+      "otherBranches": "summary",
+      "screens": [
+        "home",
+        "zones",
+        "branches",
+        "alerts",
+        "search"
+      ]
+    }
+  }
+}

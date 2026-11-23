@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content" />
+    <title>SLIC General | Motor Claims Intelligence</title>
+    <meta name="theme-color" content="#0a7c86" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <img class="logo" src="assets/slic-general.png" alt="SLIC General logo" />
+        <div>
+          <div class="sidecaption">DASHBOARD</div>
+          <button class="sideitem active" id="navHome" onclick="home()">▦ &nbsp; Overview</button>
+          <div class="sidecaption">REPORTING CATEGORIES</div>
+          <div id="sideCategories"></div>
+        </div>
+        <button class="sideitem sidealert" id="side-alerts" onclick="openAlerts()"><span class="dot"></span> Alert Centre</button>
+        <div class="sideuser" id="sideUser"></div>
+      </aside>
+      <main class="workspace">
+        <header class="top">
+          <img class="mobile-logo" src="assets/slic-general.png" alt="SLIC General" />
+          <button class="sidebar-toggle back" onclick="toggleSidebar()" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+          <div>
+            <div class="eyebrow" id="breadcrumb">MOTOR CLAIMS / ALL ISLAND</div>
+            <h1 id="pageTitle">Claims Dashboard</h1>
+          </div>
+          <button class="filter-launch back" onclick="toggleFilters()" aria-controls="filterToolbar" aria-expanded="false">Filters</button>
+          <div class="filters" id="filterToolbar">
+            <button class="filter-close back" onclick="toggleFilters(false)">Done</button>
+            <div class="periodtoggle">
+              <button id="dayBtn" onclick="setMode('daily')">Daily</button><button id="monthBtn" class="active" onclick="setMode('monthly')">Monthly</button><button id="yearBtn" onclick="setMode('yearly')">Yearly</button>
+            </div>
+            <div class="filter"><label for="period">Reporting period</label><select id="period" onchange="refresh()"></select></div>
+            <span class="fdivider" aria-hidden="true"></span>
+            <div class="filter"><label for="zoneFilter">Zone</label><select id="zoneFilter" onchange="zoneChanged()"></select></div>
+            <div class="scope-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <span class="scope-chip" id="scopeChip" hidden></span>
+              <input id="scopeSearch" type="search" autocomplete="off" placeholder="Search branch, engineer or TO…" aria-label="Filter by branch, engineer or technical officer" role="combobox" aria-expanded="false" aria-controls="scopeResults" onfocus="openResults()" oninput="openResults()" onkeydown="searchKey(event)" onblur="setTimeout(closeResults,120)" />
+              <div class="scope-results" id="scopeResults" role="listbox" hidden></div>
+            </div>
+            <button class="reset-filter" id="resetBtn" onclick="resetFilters()" title="Clear all filters">↺ <span>Clear</span></button>
+          </div>
+        </header>
+        <div class="content">
+          <section class="screen active" id="homeScreen">
+            <div class="alert-banner" id="alertBanner"></div>
+            <div class="tile-grid" id="tiles" role="toolbar" aria-label="Reporting categories"></div>
+            <div class="home-main">
+              <div class="panel table-panel" id="focusPanel">
+                <div class="focus-head">
+                  <span class="focus-ico" id="focusIcon"></span>
+                  <div class="focus-titles">
+                    <h3 id="focusTitle">Bee Express</h3>
+                    <small class="crumbs" id="focusSub"></small>
+                  </div>
+                  <button class="solid" onclick="openCategory(focus)">Details ↗</button>
+                </div>
+                <div class="htable-wrap" id="homeTable"></div>
+                <div class="home-note" id="homeNote"></div>
+              </div>
+              <div class="panel rank-panel">
+                <div class="standing" id="myStanding" hidden></div>
+                <h3 class="paneltitle">Top &amp; bottom branches</h3>
+                <div id="homeRank"></div>
+              </div>
+            </div>
+          </section>
+          <section class="screen" id="detailScreen">
+            <div class="detail-title">
+              <div class="detail-head">
+                <button class="back" onclick="home()">← Overview</button>
+                <div>
+                  <h2 id="detailName">Bee Express</h2>
+                  <p id="detailDescription"></p>
+                </div>
+              </div>
+              <span class="tag" id="sourceTag"></span>
+            </div>
+            <div class="kpis" id="detailKpis"></div>
+            <div class="detailgrid">
+              <div class="panel mainpanel">
+                <div class="panelbar">
+                  <div>
+                    <h3 id="drillTitle">Zone performance</h3>
+                    <small id="drillSubtitle"></small>
+                  </div>
+                  <button class="back" id="levelBack" onclick="goUp()" style="display: none">← Back</button>
+                </div>
+                <div class="panelcontent" id="drillBody"></div>
+              </div>
+              <div class="rightpanels">
+                <div class="panel"><h3 class="paneltitle" id="rightTitle"></h3><div id="rightTop"></div></div>
+                <div class="panel"><h3 class="paneltitle" id="bottomTitle"></h3><div id="rightBottom"></div></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <nav class="mobilebar">
+          <button onclick="home()"><b>⌂</b>Home</button><button onclick="home(); document.getElementById('tiles').scrollIntoView({ behavior: 'smooth' });"><b>▦</b>Categories</button><button onclick="openAlerts()"><b>⚠</b>Alerts</button>
+        </nav>
+      </main>
+    </div>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="mobile.js"></script>
+  </body>
+</html>
